@@ -9,7 +9,7 @@
 <% end %>
 <h3> <%= "Avg Age: #{@movie.avg_age}" %> </h3>
 <h3> Add an Actor to this Movie </h3>
-<%= form_with url: "/movies/#{@movie.id}?add=query", method: :get, local: true do |form| %>
+<%= form_with url: "/movies/#{@movie.id}?add=query", method: :post, local: true do |form| %>
   <%= form.label :query %>
   <%= form.text_field :query %>
   <%= form.submit "Add" %>

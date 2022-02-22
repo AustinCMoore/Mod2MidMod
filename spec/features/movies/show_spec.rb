@@ -76,7 +76,7 @@ RSpec.describe 'movie show page' do
     fill_in('query', with: 'Mike Dao')
     click_on('Add')
 
-    expect(current_path).to eq("/movies/#{movie_2.id}?add=#{actor_3.name}")
+    expect(current_path).to eq("/movies/#{movie_2.id}")
 
     expect(page).to have_content("#{actor_3.name}")
   end
