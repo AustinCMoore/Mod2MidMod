@@ -57,6 +57,6 @@ RSpec.describe 'movie show page' do
 
     expect("#{actor_2.name}").to appear_before("#{actor_1.name}")
 
-    expect(page).to have_content("Avg Age: 53.5")
+    expect(page).to have_content("Avg Age: 26.5")
   end
 end
