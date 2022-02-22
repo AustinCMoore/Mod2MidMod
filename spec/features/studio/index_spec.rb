@@ -2,9 +2,6 @@ require 'rails_helper'
 
 RSpec.describe 'studio index page' do
   it "lists each studio's name, location, and movie titles" do
-
-    visit "/studios"
-
     studio_1 = Studio.create!(name: "Turing Entertainment", location: "Denver")
     studio_2 = Studio.create!(name: "Austin's Movie Studio", location: "Laurel")
     studio_3 = Studio.create!(name: "Noel's Movie Studio", location: "Baltimore")
@@ -15,6 +12,8 @@ RSpec.describe 'studio index page' do
     movie_4 = studio_2.movies.create!(title: "Awkward in HighSchool", creation_year: 2018, genre: 'Reality')
     movie_5 = studio_2.movies.create!(title: "Moving to Maryland", creation_year: 2019, genre: 'Reality')
     movie_6 = studio_3.movies.create!(title: "Loving this idiot", creation_year: 2020, genre: 'Romance')
+
+    visit "/studios"
 
     expect(current_path).to eq("/studios")
 
