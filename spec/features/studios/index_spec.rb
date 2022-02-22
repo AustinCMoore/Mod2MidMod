@@ -52,4 +52,6 @@ RSpec.describe 'studio index page' do
       expect(page).to have_content("#{movie_6.title}")
     end
   end
+
+  
 end
